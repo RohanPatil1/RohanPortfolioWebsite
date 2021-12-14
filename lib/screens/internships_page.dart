@@ -39,7 +39,7 @@ class _InternshipPageState extends State<InternshipPage> {
           strings: const [
             "Involved working on multiple projects viz LeaderBridge,Muffin,ITG,Pixels,etc.",
             "Co-ordinated with the backend team & implemented APIs into the mobile version, handled UI/UX, bugs,animations, etc",
-            "Implemented sockets in Muffin for live auction feature,firebase GSignIn,etc",
+            "Utilized sockets in Muffin for live auction feature,firebase GSignIn,etc",
           ],
         ),
         position: "Flutter Developer",
@@ -113,7 +113,7 @@ class _InternshipPageState extends State<InternshipPage> {
             ],
           ),
           position: "Android Developer",
-          org: "Commuteck, Navi Mumbai",
+          org: "Commuteck, Mumbai",
           dur: "Oct 2018 - Dec 2018",
           certifUrl:
               'https://drive.google.com/file/d/1mZkNLXP48Qh21AYkdYKA_LECqEZnbANj/view?usp=sharing'),
@@ -298,7 +298,7 @@ class InternshipTile extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
                   SizedBox(
-                    height: h * 0.15,
+                    height: h * 0.10,
                   ),
                   Padding(
                     padding: const EdgeInsets.symmetric(horizontal: 16.0),
@@ -354,7 +354,7 @@ class InternshipTile extends StatelessWidget {
                     ],
                   ),
                   SizedBox(
-                    height: h * 0.08,
+                    height: h * 0.06,
                   ),
                 ],
               ),

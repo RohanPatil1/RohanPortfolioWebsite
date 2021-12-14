@@ -2,8 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:rohan_portfolio/widgets/bullet_list.dart';
 import 'package:rohan_portfolio/widgets/link_button.dart';
 
-import '../home_page.dart';
-
 class ChillTunesPage extends StatelessWidget {
   const ChillTunesPage({Key? key}) : super(key: key);
 

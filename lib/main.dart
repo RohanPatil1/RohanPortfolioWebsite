@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:rohan_portfolio/constants.dart';
 import 'package:rohan_portfolio/screens/home_page.dart';
 import 'package:rohan_portfolio/screens/responsive_layout.dart';
+import 'package:rohan_portfolio/screens/wip_mobile.dart';
+import 'package:rohan_portfolio/screens/wip_tab_page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -22,17 +25,14 @@ class MyApp extends StatelessWidget {
           //color for scrollbar
           // highlightColor: Color(0xffffc600),
           scrollbarTheme: ScrollbarThemeData().copyWith(
-            thumbColor: MaterialStateProperty.all(Colors.grey.withOpacity(0.2)),
-            trackColor: MaterialStateProperty.all(Colors.black),
-
-            thickness: MaterialStateProperty.all(7.2)
-          )),
+              thumbColor:
+                  MaterialStateProperty.all(Colors.grey.withOpacity(0.2)),
+              trackColor: MaterialStateProperty.all(Colors.black),
+              thickness: MaterialStateProperty.all(7.2))),
       home: ResponsiveLayout(
-        mobileBody: Container(
-          color: Colors.red,
-        ),
+        mobileBody: const WIP_Mobile(),
         desktopBody: const HomePage(),
-        tabletBody: const HomePage(),
+        tabletBody: const WIP_Tab(),
       ),
     );
   }
