@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:rohan_portfolio/widgets/bullet_list.dart';
 import 'package:rohan_portfolio/widgets/link_button.dart';
-
+import 'package:sizer/sizer.dart';
 import '../home_page.dart';
 
 class WayMapsPage extends StatelessWidget {
@@ -40,16 +40,19 @@ class WayMapsPage extends StatelessWidget {
                       mainAxisAlignment: MainAxisAlignment.start,
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        const Text(
+                        SizedBox(height: 12 .h,),
+                         Text(
                           "WayMaps",
                           style: TextStyle(
-                              fontSize: 84.0,
+                              fontSize: 18 .sp,
                               color: Colors.white,
                               fontWeight: FontWeight.bold),
                         ),
-
+                        SizedBox(
+                          height: 2 .h,
+                        ),
                         Row(
-                          children: const [
+                          children:  [
                             LinkButton(
                               title: "GitHub",
                               assetImage: "assets/images/github.png",
@@ -57,7 +60,7 @@ class WayMapsPage extends StatelessWidget {
                                   "https://github.com/RohanPatil1/Android-Development/tree/master/WayMaps",
                             ),
                             SizedBox(
-                              width: 8.0,
+                              width: 1.w,
                             ),
                             LinkButton(
                               title: "YouTube",
@@ -67,17 +70,16 @@ class WayMapsPage extends StatelessWidget {
                           ],
                         ),
 
-                        const SizedBox(
-                          height: 16.0,
+                        SizedBox(
+                          height: 2 .h,
                         ),
-
                         BulletList(
                           strings: const [
                             "This is an Android application about getting nearby places according to the user's current location",
                             "It has Maps from MapBoxSDK along with Google Maps Places API to fetch nearby places",
                             "It uses Retrofit for API handling, background services & lottie animation.",
                           ],
-                          fontSize: 24.0,
+                          fontSize: 4.2 .sp,
                           fontColor: Colors.white60,
                         ),
                         // const Text(
@@ -113,9 +115,7 @@ class WayMapsPage extends StatelessWidget {
                         //   overflow: TextOverflow.ellipsis,
                         //   maxLines: 3,
                         // ),
-                        const SizedBox(
-                          height: 2.0,
-                        ),
+
                         // Built with Flutter, Firebase. It also uses hive for storing information such as theme, mix (playlist),tunes info,etc.
                       ],
                     ),

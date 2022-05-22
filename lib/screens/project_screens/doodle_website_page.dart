@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:rohan_portfolio/widgets/bullet_list.dart';
 import 'package:rohan_portfolio/widgets/link_button.dart';
+import 'package:sizer/sizer.dart';
 
 import '../home_page.dart';
 
@@ -19,13 +20,17 @@ class DoodlePage extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Expanded(
+                Flexible(
                   flex: 1,
-                  child: Image.asset(
-                    "assets/images/doodle.png",
-                    height: MediaQuery.of(context).size.height * 0.7,
-                    width: MediaQuery.of(context).size.width * 0.8,
-                    fit: BoxFit.cover,
+                  child: Container(
+                    margin: EdgeInsets.symmetric(horizontal: 16.0),
+                    child: Image.asset(
+                      "assets/images/doodle.png",
+                      height: MediaQuery.of(context).size.height * 0.7,
+                      width: MediaQuery.of(context).size.width * 0.8,
+                      fit: BoxFit.cover,
+
+                    ),
                   ),
                 ),
                 Expanded(
@@ -37,21 +42,21 @@ class DoodlePage extends StatelessWidget {
                       mainAxisAlignment: MainAxisAlignment.start,
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        SizedBox(height: 90.0,),
+                        SizedBox(height: 12 .h,),
 
-                        const Text(
+                        Text(
                           "Doodle Portfolio",
                           style: TextStyle(
-                              fontSize: 84.0,
+                              fontSize: 18 .sp,
                               color: Colors.white,
                               fontWeight: FontWeight.bold),
                         ),
 
                         SizedBox(
-                          height: 24.0,
+                          height: 2 .h,
                         ),
                         Row(
-                          children: const [
+                          children:  [
                             LinkButton(
                               title: "Website",
                               assetImage: "assets/images/web.png",
@@ -59,7 +64,7 @@ class DoodlePage extends StatelessWidget {
                               "https://harshadadoodle.github.io/#/",
                             ),
                             SizedBox(
-                              width: 8.0,
+                              width: 1.w,
                             ),
                             LinkButton(
                               title: "YouTube",
@@ -69,8 +74,8 @@ class DoodlePage extends StatelessWidget {
                           ],
                         ),
 
-                        const SizedBox(
-                          height: 16.0,
+                        SizedBox(
+                          height: 2 .h,
                         ),
                         BulletList(
                           strings: const [
@@ -78,7 +83,7 @@ class DoodlePage extends StatelessWidget {
                             "It is a responsive site which supports mobile, tablets and desktop sized devices. ",
 
                           ],
-                          fontSize: 24.0,
+                          fontSize: 5 .sp,
                           fontColor: Colors.white60,
                         ),
 

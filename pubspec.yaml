@@ -35,7 +35,7 @@ dependencies:
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.2
   video_player: ^2.2.7
-
+  http:
   freezed:
   parallax_rain: 1.1.0
   blobs: ^2.0.0
@@ -43,7 +43,9 @@ dependencies:
   url_launcher: ^6.0.12
   carousel_slider: ^4.0.0
   glassmorphism: ^3.0.0
-  sizer:
+  sizer: ^2.0.15
+  lottie: ^1.3.0
+
 
 
 
@@ -80,10 +82,8 @@ flutter:
   # To add assets to your application, add an assets section, like this:
   assets:
     - assets/images/
-    - assets/home.m4v
-    - assets/home2.m4v
-    - assets/home3.m4v
     - assets/home4.m4v
+    - assets/anim/
 
     #   - images/a_dot_ham.jpeg
 

@@ -61,8 +61,7 @@ class _HomePageState extends State<HomePage>
 
   @override
   Widget build(BuildContext context) {
-    final w = MediaQuery.of(context).size.width;
-    final h = MediaQuery.of(context).size.height;
+
     return Scaffold(
       backgroundColor: blackBG,
       body: ListView(
@@ -72,7 +71,7 @@ class _HomePageState extends State<HomePage>
           Stack(
             children: [
               Container(
-                width: MediaQuery.of(context).size.width,
+                width: 100 .w,
                 height: MediaQuery.of(context).size.height + 20,
                 child: const IntroPage(),
               ),
@@ -92,7 +91,7 @@ class _HomePageState extends State<HomePage>
           ),
 
           const SizedBox(
-            height: 80.0,
+            height: 100.0,
           ),
 
           //PROJECTS PAGE
@@ -121,7 +120,7 @@ class _HomePageState extends State<HomePage>
                         },
                         child: Blob.fromID(
                           id: const ['14-7-17354'],
-                          size: 800,
+                          size: 55 .w,
                         ),
                       ),
                     ),
@@ -150,9 +149,9 @@ class _HomePageState extends State<HomePage>
                             children: const [
                               ChillTunesPage(),
                               DoodlePage(),
-                              AnimeInstaPage(),
                               WayMapsPage(),
                               AssignmentPage(),
+                              AnimeInstaPage(),
                               InshortsPage(),
                             ],
                           ),
@@ -173,12 +172,12 @@ class _HomePageState extends State<HomePage>
                                 Text(
                                   "PROJECTS",
                                   style: TextStyle(
-                                      fontSize: 16.0,
+                                      fontSize: 3.sp,
                                       color: Colors.white,
                                       fontWeight: FontWeight.bold),
                                 ),
                                 SizedBox(
-                                  height: 8.0,
+                                  height: 1.h,
                                 ),
                                 Row(
                                   mainAxisSize: MainAxisSize.max,
@@ -204,8 +203,8 @@ class _HomePageState extends State<HomePage>
                               ],
                             ),
                           ),
-                          const SizedBox(
-                            height: 38.0,
+                          SizedBox(
+                            height: 10.h,
                           ),
                         ],
                       ),
@@ -216,31 +215,31 @@ class _HomePageState extends State<HomePage>
               Align(
                 alignment: Alignment.topRight,
                 child: Container(
-                  width: 200.0,
+                  width: 15.w,
                   color: Colors.transparent,
                   child: Row(
                     mainAxisSize: MainAxisSize.max,
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: <Widget>[
                       IconButton(
-                        icon: const Icon(
+                        icon: Icon(
                           Icons.arrow_back_ios,
                           color: Colors.grey,
-                          size: 18.0,
+                          size: 4.sp,
                         ),
                         onPressed: () {
                           pageController.previousPage(
                               duration: _kDuration, curve: _kCurve);
                         },
                       ),
-                      const SizedBox(
-                        width: 8.0,
+                      SizedBox(
+                        width: 2.w,
                       ),
                       IconButton(
-                        icon: const Icon(
+                        icon: Icon(
                           Icons.arrow_forward_ios,
                           color: Colors.grey,
-                          size: 18.0,
+                          size: 4.sp,
                         ),
                         onPressed: () {
                           pageController.nextPage(
@@ -252,14 +251,14 @@ class _HomePageState extends State<HomePage>
                 ),
               ),
               Positioned(
-                  bottom: 10,
-                  right: -70,
+                  bottom: 1.8.h,
+                  right: -4.5.w,
                   child: Transform.rotate(
                     angle: 270.0,
                     child: Image.asset(
                       "assets/images/tree.png",
-                      width: 600.0,
-                      height: 400.0,
+                      width: 39.w,
+                      height: 51.h,
                     ),
                   ))
             ],
@@ -280,7 +279,7 @@ class _HomePageState extends State<HomePage>
           Stack(
             children: [
               Opacity(
-                  opacity: 0.1,
+                  opacity: 0.2,
                   child: Image.asset(
                     "assets/images/lines.png",
                     fit: BoxFit.cover,

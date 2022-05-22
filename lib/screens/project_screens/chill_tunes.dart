@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:rohan_portfolio/widgets/bullet_list.dart';
 import 'package:rohan_portfolio/widgets/link_button.dart';
+import 'package:sizer/sizer.dart';
 
 class ChillTunesPage extends StatelessWidget {
   const ChillTunesPage({Key? key}) : super(key: key);
@@ -38,20 +39,23 @@ class ChillTunesPage extends StatelessWidget {
                       mainAxisAlignment: MainAxisAlignment.start,
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        const Text(
+                        SizedBox(
+                          height: 7.h,
+                        ),
+                        Text(
                           "Chill Tunes",
                           style: TextStyle(
-                              fontSize: 84.0,
+                              fontSize: 18.sp,
                               color: Colors.white,
                               fontWeight: FontWeight.w800),
                         ),
 
                         SizedBox(
-                          height: 8.0,
+                          height: 2.h,
                         ),
 
                         Row(
-                          children: const [
+                          children: [
                             LinkButton(
                               title: "Play Store",
                               assetImage: "assets/images/play.png",
@@ -59,7 +63,7 @@ class ChillTunesPage extends StatelessWidget {
                                   "https://play.google.com/store/apps/details?id=sutechs.nirvana&hl=en_IN&gl=US",
                             ),
                             SizedBox(
-                              width: 8.0,
+                              width: 1.w,
                             ),
                             LinkButton(
                               title: "YouTube",
@@ -69,8 +73,8 @@ class ChillTunesPage extends StatelessWidget {
                           ],
                         ),
 
-                        const SizedBox(
-                          height: 16.0,
+                         SizedBox(
+                          height: 2 .h,
                         ),
                         BulletList(
                           strings: const [
@@ -78,7 +82,7 @@ class ChillTunesPage extends StatelessWidget {
                             "Build with Flutter SDK along with Firebase's CloudFirestore & Storage.",
                             "It also supports downloading the tunes. This information is stored using hive, which includes data like tune's url, icon, mix, etc",
                           ],
-                          fontSize: 24.0,
+                          fontSize: 4.5 .sp,
                           fontColor: Colors.white60,
                         )
 

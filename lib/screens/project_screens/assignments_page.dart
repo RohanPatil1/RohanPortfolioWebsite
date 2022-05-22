@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:rohan_portfolio/widgets/bullet_list.dart';
 import 'package:rohan_portfolio/widgets/link_button.dart';
+import 'package:sizer/sizer.dart';
 
 import '../home_page.dart';
 
@@ -40,19 +41,19 @@ class AssignmentPage extends StatelessWidget {
                       mainAxisAlignment: MainAxisAlignment.start,
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        const Text(
+                        SizedBox(height: 10 .h,),
+                         Text(
                           "Assignments App",
                           style: TextStyle(
-                              fontSize: 84.0,
+                              fontSize: 18 .sp,
                               color: Colors.white,
                               fontWeight: FontWeight.bold),
                         ),
-
                         SizedBox(
-                          height: 24.0,
+                          height: 2 .h,
                         ),
                         Row(
-                          children: const [
+                          children:  [
                             LinkButton(
                               title: "GitHub",
                               assetImage: "assets/images/github.png",
@@ -60,7 +61,7 @@ class AssignmentPage extends StatelessWidget {
                                   "https://github.com/RohanPatil1/Android-Development/tree/master/Assignments",
                             ),
                             SizedBox(
-                              width: 8.0,
+                              width: 1.w,
                             ),
                             LinkButton(
                               title: "YouTube",
@@ -70,8 +71,8 @@ class AssignmentPage extends StatelessWidget {
                           ],
                         ),
 
-                        const SizedBox(
-                          height: 16.0,
+                        SizedBox(
+                          height: 2 .h,
                         ),
                         BulletList(
                           strings: const [
@@ -79,7 +80,7 @@ class AssignmentPage extends StatelessWidget {
                             "It uses Firebase Realtime-Database for the data and stores pdf files in Firebase Storage",
                             "It also has push notifications implemented through Firebase Cloud Messaging",
                           ],
-                          fontSize: 24.0,
+                          fontSize: 4.2 .sp,
                           fontColor: Colors.white60,
                         ),
 

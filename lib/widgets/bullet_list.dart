@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-
+import 'package:sizer/sizer.dart';
 class BulletList extends StatelessWidget {
   final List<String> strings;
   double? fontSize;
@@ -8,8 +8,8 @@ class BulletList extends StatelessWidget {
   BulletList(
       {Key? key,
       required this.strings,
-      this.fontSize = 16.0,
-      this.fontColor = Colors.white})
+      this.fontSize ,
+      this.fontColor = Colors.white70})
       : super(key: key);
 
   @override
@@ -41,7 +41,7 @@ class BulletList extends StatelessWidget {
                     textAlign: TextAlign.left,
                     softWrap: true,
                     style: TextStyle(
-                        fontSize: fontSize,
+                        fontSize: fontSize??3.2.sp,
                         color: fontColor,
                         height: 1.55,
                         fontWeight: FontWeight.w400),

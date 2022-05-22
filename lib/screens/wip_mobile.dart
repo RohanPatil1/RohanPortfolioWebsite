@@ -35,7 +35,7 @@ class WIP_Mobile extends StatelessWidget {
                     .size
                     .width,
                 decoration: BoxDecoration(
-                  color: Colors.deepOrangeAccent,
+                  color: Colors.deepOrangeAccent.withOpacity(0.9),
                   borderRadius: BorderRadius.only(
                       bottomRight: Radius.circular(42.0),
                       bottomLeft: Radius.circular(42.0)),
@@ -60,18 +60,18 @@ class WIP_Mobile extends StatelessWidget {
                 ),
               ),
             ),
-            Positioned(
-              bottom: -22,
-              right: 0,
-              left: 0,
-              child: Align(
-                  alignment: Alignment.bottomCenter,
-                  child: Image.asset(
-                    "assets/images/cherrytree.png",
-                    fit: BoxFit.cover,
-                    height: MediaQuery.of(context).size.height*0.5,
-                  )),
-            ),
+            // Positioned(
+            //   bottom: -22,
+            //   right: 0,
+            //   left: 0,
+            //   child: Align(
+            //       alignment: Alignment.bottomCenter,
+            //       child: Image.asset(
+            //         "assets/images/cherrytree.png",
+            //         fit: BoxFit.cover,
+            //         height: MediaQuery.of(context).size.height*0.5,
+            //       )),
+            // ),
             Center(
               child: ClipRRect(
                 borderRadius: BorderRadius.circular(16.0),
@@ -81,7 +81,7 @@ class WIP_Mobile extends StatelessWidget {
                   child: Container(
                     width: MediaQuery.of(context).size.width*0.54,
                     decoration: BoxDecoration(
-                        color: blackBG.withOpacity(0.7),
+                        color: Colors.grey.withOpacity(0.1),
                         border: Border.all(color: Colors.white70, width: 0.3),
                         borderRadius: BorderRadius.circular(16.0)),
                     child: Padding(

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:rohan_portfolio/widgets/bullet_list.dart';
 import 'package:rohan_portfolio/widgets/link_button.dart';
+import 'package:sizer/sizer.dart';
 
 import '../home_page.dart';
 
@@ -26,7 +27,7 @@ class InshortsPage extends StatelessWidget {
                     child: Image.asset(
                       "assets/images/inshorts.png",
                       width: MediaQuery.of(context).size.width * 0.35,
-                      height: MediaQuery.of(context).size.height * 0.8,
+                      height: MediaQuery.of(context).size.height * 0.76,
                       fit: BoxFit.cover,
                     ),
                   ),
@@ -40,15 +41,19 @@ class InshortsPage extends StatelessWidget {
                       mainAxisAlignment: MainAxisAlignment.start,
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        const Text(
+                        SizedBox(height: 12 .h,),
+                         Text(
                           "InShorts Clone",
                           style: TextStyle(
-                              fontSize: 84.0,
+                              fontSize: 18 .sp,
                               color: Colors.white,
                               fontWeight: FontWeight.bold),
                         ),
+                        SizedBox(
+                          height: 2 .h,
+                        ),
                         Row(
-                          children: const [
+                          children:  [
                             LinkButton(
                               title: "GitHub",
                               assetImage: "assets/images/github.png",
@@ -56,7 +61,7 @@ class InshortsPage extends StatelessWidget {
                                   "https://github.com/RohanPatil1/Flutter/tree/master/inShortsClone",
                             ),
                             SizedBox(
-                              width: 8.0,
+                              width: 1.w,
                             ),
                             LinkButton(
                               title: "YouTube",
@@ -65,8 +70,8 @@ class InshortsPage extends StatelessWidget {
                             ),
                           ],
                         ),
-                        const SizedBox(
-                          height: 16.0,
+                        SizedBox(
+                          height: 2 .h,
                         ),
                         BulletList(
                           strings: const [
@@ -74,7 +79,7 @@ class InshortsPage extends StatelessWidget {
                             "This app shows news fetched from NewsApi.org API. User's can save articles for offline purpose. This data is stored using SQLite(sqlflite)",
                             "It uses Scoped Model Architecture for State Management of the application.",
                           ],
-                          fontSize: 24.0,
+                          fontSize: 4.25 .sp,
                           fontColor: Colors.white60,
                         ),
 

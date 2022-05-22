@@ -1,5 +1,6 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
+import 'package:sizer/sizer.dart';
 
 class CertificatePage extends StatefulWidget {
   const CertificatePage({Key? key}) : super(key: key);
@@ -33,7 +34,7 @@ class _CertificatePageState extends State<CertificatePage> {
                   Text(
                     "CERTIFICATIONS",
                     style: TextStyle(
-                        fontSize: 16.0,
+                        fontSize: 3 .sp,
                         color: Colors.white,
                         fontWeight: FontWeight.bold),
                   ),
@@ -106,10 +107,10 @@ class _CertificatePageState extends State<CertificatePage> {
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: <Widget>[
                 IconButton(
-                  icon: const Icon(
+                  icon:  Icon(
                     Icons.arrow_back_ios,
                     color: Colors.grey,
-                    size: 18.0,
+                    size: 4.sp,
                   ),
                   onPressed: () {
                     carouselController.previousPage(
@@ -117,14 +118,14 @@ class _CertificatePageState extends State<CertificatePage> {
                         curve: Curves.linear);
                   },
                 ),
-                const SizedBox(
-                  width: 8.0,
+                 SizedBox(
+                  width: 1.w,
                 ),
                 IconButton(
-                  icon: const Icon(
+                  icon:  Icon(
                     Icons.arrow_forward_ios,
                     color: Colors.grey,
-                    size: 18.0,
+                    size: 4.sp,
                   ),
                   onPressed: () {
                     carouselController.nextPage(

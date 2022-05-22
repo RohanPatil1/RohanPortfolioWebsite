@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:rohan_portfolio/utils/utils.dart';
+import 'package:sizer/sizer.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 
@@ -54,13 +55,13 @@ class LinkButton extends StatelessWidget {
                 width: 32.0,
                 height: 32.0,
               ),
-              const SizedBox(
-                width: 8.0,
+               SizedBox(
+                width:1 .w,
               ),
               Text(
                 title,
                 style:
-                const TextStyle(color: Colors.blueAccent, fontSize: 18.0,fontWeight: FontWeight.w600),
+                 TextStyle(color: Colors.blueAccent, fontSize: 4 .sp,fontWeight: FontWeight.w600),
               )
             ],
           ),

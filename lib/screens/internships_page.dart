@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:rohan_portfolio/constants.dart';
 import 'package:rohan_portfolio/utils/utils.dart';
 import 'package:rohan_portfolio/widgets/bullet_list.dart';
+import 'package:sizer/sizer.dart';
 
 class InternshipPage extends StatefulWidget {
   const InternshipPage({Key? key}) : super(key: key);
@@ -37,7 +38,7 @@ class _InternshipPageState extends State<InternshipPage> {
       InternshipTile(
         bulletList: BulletList(
           strings: const [
-            "Involved working on multiple projects viz LeaderBridge,Muffin,ITG,Pixels,etc.",
+            "Involved working on multiple projects viz LeaderBridge,Muffin,ITG,Pixels,etc",
             "Co-ordinated with the backend team & implemented APIs into the mobile version, handled UI/UX, bugs,animations, etc",
             "Utilized sockets in Muffin for live auction feature,firebase GSignIn,etc",
           ],
@@ -100,7 +101,7 @@ class _InternshipPageState extends State<InternshipPage> {
             ],
           ),
           position: "Android Developer",
-          org: "The Sparks Foundation",
+          org: "Sparks Foundation",
           dur: "May 2019 - Jul 2019",
           certifUrl:
               'https://drive.google.com/file/d/1ZM_YdFpjF1lrd2HoMV8UxFQeHg0LbLtc/view?usp=sharing'),
@@ -135,7 +136,7 @@ class _InternshipPageState extends State<InternshipPage> {
                     Text(
                       "INTERNSHIPS",
                       style: TextStyle(
-                          fontSize: 16.0,
+                          fontSize: 3 .sp,
                           color: Colors.white,
                           fontWeight: FontWeight.bold),
                     ),
@@ -223,10 +224,10 @@ class _InternshipPageState extends State<InternshipPage> {
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: <Widget>[
                   IconButton(
-                    icon: const Icon(
+                    icon:  Icon(
                       Icons.arrow_back_ios,
                       color: Colors.grey,
-                      size: 18.0,
+                      size: 4.sp,
                     ),
                     onPressed: () {
                       internCarouselController.previousPage(
@@ -234,14 +235,14 @@ class _InternshipPageState extends State<InternshipPage> {
                           curve: Curves.easeIn);
                     },
                   ),
-                  const SizedBox(
-                    width: 8.0,
+                   SizedBox(
+                    width: 1 .w,
                   ),
                   IconButton(
-                    icon: const Icon(
+                    icon:  Icon(
                       Icons.arrow_forward_ios,
                       color: Colors.grey,
-                      size: 18.0,
+                      size: 4.sp,
                     ),
                     onPressed: () {
                       internCarouselController.nextPage(
@@ -278,8 +279,8 @@ class InternshipTile extends StatelessWidget {
   Widget build(BuildContext context) {
     double h = MediaQuery.of(context).size.height;
     return Container(
-      height: h * 0.7,
-      width: h * 0.6,
+      height: 10.h,
+      width: 25 .w,
       margin: const EdgeInsets.symmetric(horizontal: 8.0),
       child: Stack(
         children: [
@@ -288,7 +289,7 @@ class InternshipTile extends StatelessWidget {
             left: 28.0,
             child: Container(
               // height: h * 0.6,
-              width: h * 0.4,
+              width: 20 .w,
               decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(8.0),
                   border: Border.all(width: 0.8, color: Colors.white),
@@ -298,7 +299,7 @@ class InternshipTile extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
                   SizedBox(
-                    height: h * 0.10,
+                    height: 11.h,
                   ),
                   Padding(
                     padding: const EdgeInsets.symmetric(horizontal: 16.0),
@@ -326,14 +327,14 @@ class InternshipTile extends StatelessWidget {
                           "Certificate",
                           textAlign: TextAlign.center,
                           style: TextStyle(
-                              fontSize: 14.0,
+                              fontSize: 3 .sp,
                               fontWeight: FontWeight.w600,
                               color: Colors.pinkAccent),
                         ),
                       ),
                       (playstoreUrl != null)
-                          ? const SizedBox(
-                              width: 8.0,
+                          ? SizedBox(
+                              width: 1 .w,
                             )
                           : const Text(""),
                       (playstoreUrl != null)
@@ -345,7 +346,7 @@ class InternshipTile extends StatelessWidget {
                                 "PlayStore",
                                 textAlign: TextAlign.center,
                                 style: TextStyle(
-                                    fontSize: 14.0,
+                                    fontSize: 3.sp,
                                     fontWeight: FontWeight.w600,
                                     color: Color(0xffFFE5B4)),
                               ),
@@ -382,8 +383,8 @@ class InternshipTile extends StatelessWidget {
                       org,
                       style: TextStyle(
                           color: Colors.white,
-                          fontSize: 30.0,
-                          shadows: <Shadow>[
+                          fontSize: 6.4 .sp,
+                          shadows: const <Shadow>[
                             // Shadow(
                             //   offset: Offset(0.3, 0.3),
                             //   blurRadius: 3.0,
@@ -396,7 +397,7 @@ class InternshipTile extends StatelessWidget {
                       position,
                       style: TextStyle(
                           color: Colors.white,
-                          fontSize: 22.0,
+                          fontSize: 3.5 .sp,
                           shadows: const <Shadow>[
                             // Shadow(
                             //   offset: Offset(0.3, 0.3),
@@ -418,7 +419,7 @@ class InternshipTile extends StatelessWidget {
                           // ],
                           color: Colors.white,
                           fontStyle: FontStyle.italic,
-                          fontSize: 14.0,
+                          fontSize: 2.5 .sp,
                           fontWeight: FontWeight.w700),
                     ),
                   ],
